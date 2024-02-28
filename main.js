@@ -71,9 +71,6 @@ var numero = prompt("Ingresar número");
 
 function imprimirNumerosYPalabras() {
 
-    for (let i = 0; i <= num4; i++) {
-        console.log(i);
-    }
 
     console.log("La palabra ingresada es: " + palabra);
     console.log("El número ingresado es: " + numero);
@@ -143,10 +140,14 @@ for (let i = 0; i < long1; i++) {
 var num5 = prompt("Ingresar número para multiplicar elementos: ");
 
 function multiplicarArrayPorNumero() {
+
+    console.log("Valores del array : " + "{" + array3.join( "," ) + "}");
     
-    for (let i = 0; i < array.length; i++) {
-        console.log(array3[i] * num5);
+    for (let i = 0; i < array3.length; i++) {
+        array3[i] = array3[i] * num5;
     }
+    
+    console.log("Valores del array multiplicados por " + num5 + " : "  + "{" + array3.join( "," ) + "}");
 }
 
 multiplicarArrayPorNumero(array3,num5);
